@@ -22,7 +22,7 @@
 body {
   min-height: 100vh;
   background: center / cover url("elegant.jpg") no-repeat;
-  background-color: lightcoral;
+  background-color: var(--dark-color, darkblue);
   font-size: 1.6rem;
 }
 article {
