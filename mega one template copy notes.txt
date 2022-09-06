@@ -1,0 +1,3 @@
+- css files are in vendor/css
+
+- google fonts are imported from css (each font seperatly)
