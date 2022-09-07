@@ -21,7 +21,6 @@
 }
 body {
   min-height: 100vh;
-  background: center / cover url("elegant.jpg") no-repeat;
   background-color: var(--dark-color, darkblue);
   font-size: 1.6rem;
 }
@@ -47,6 +46,14 @@ a {
 a:hover {
   all: unset;
   cursor: pointer;
+}
+a .link-text {
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
 }
 
 /* container */
@@ -90,7 +97,7 @@ a:hover {
 .d-flex.space-between {
   justify-content: space-between;
 }
-.d-flex.align-ceneter {
+.d-flex.align-center {
   align-items: center;
 }
 /* ===================================
@@ -101,11 +108,31 @@ header {
 }
 .upper-nav {
   color: white;
-  padding: 16px 16px 8px;
-}
-.upper-nav i {
-  margin-right: 16px;
+  padding: 35px 15px 8px;
   font-size: 18px;
+}
+@media (max-width: 567px) {
+  .upper-nav {
+    font-size: 21px;
+    flex-direction: column;
+    gap: 35px;
+  }
+}
+.upper-nav .contact-num i {
+  margin-right: 18px;
+}
+.upper-nav a i {
+  margin-right: 36px;
+}
+.upper-nav a:last-of-type i {
+  margin: 0;
+}
+@media (max-width: 567px) {
+  .upper-nav .social-media-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .upper-nav a {
   color: #fff;
