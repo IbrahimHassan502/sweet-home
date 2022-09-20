@@ -1,11 +1,4 @@
 /* ===================================
-    Google Fonts
-====================================== */
-/* @import url("https://fonts.googleapis.com/css2?family=Cairo&family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"); */
-
-/* ===================================
     General
 ====================================== */
 :root {
@@ -41,6 +34,7 @@ ul {
 }
 
 a {
+  all: unset;
   text-decoration: none;
 }
 a:hover {
@@ -94,10 +88,12 @@ a .link-text {
 .d-flex {
   display: flex;
 }
-.d-flex.space-between {
+.space-between {
+  display: flex;
   justify-content: space-between;
 }
-.d-flex.align-center {
+.align-center {
+  display: flex;
   align-items: center;
 }
 /* ===================================
@@ -106,9 +102,12 @@ a .link-text {
 header {
   max-width: 100%;
 }
+/* ===================================
+    upper nav
+====================================== */
 .upper-nav {
   color: white;
-  padding: 35px 15px 8px;
+  padding: 35px 16px;
   font-size: 18px;
 }
 @media (max-width: 567px) {
@@ -136,4 +135,35 @@ header {
 }
 .upper-nav a {
   color: #fff;
+}
+/* ===================================
+    main nav
+====================================== */
+nav {
+  padding-left: 16px;
+}
+.logo span {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.logo span:first-of-type {
+  color: var(--main-color);
+}
+.logo span:last-of-type {
+  color: var(--second-color);
+}
+.nav-links a {
+  text-transform: capitalize;
+  transition: background 0.3s ease-in-out;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
+  margin: 8px 16px;
+  color: var(--main-color);
+  border-radius: 5px;
+}
+.nav-links a.active {
+  margin: 0px;
+  padding: 8px 16px;
+  background-color: var(--second-color);
+  color: white;
 }
