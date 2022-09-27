@@ -106,19 +106,15 @@ a .link-text {
 ====================================== */
 header {
   max-width: 100%;
-  padding-inline: 16px;
 }
-@media (max-width: 380px) {
-  header {
-    padding-inline: 0;
-  }
-}
+
 /* ===================================
     upper nav
 ====================================== */
 .upper-nav {
   color: white;
   padding-block: 35px;
+  padding-right: 16px;
   font-size: 18px;
 }
 @media (max-width: 567px) {
@@ -126,6 +122,11 @@ header {
     font-size: 2.1rem;
     flex-direction: column;
     gap: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .upper-nav {
+    padding-right: 0;
   }
 }
 .upper-nav .contact-num i {
@@ -212,5 +213,132 @@ header {
 @media (max-width: 992px) {
   .menu-button {
     display: block;
+  }
+}
+
+/* ===================================
+    banner
+====================================== */
+.banner {
+  overflow: hidden;
+}
+.banner .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 6%;
+}
+
+.slogan {
+  opacity: 0;
+  font-size: 7.1rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: -10%;
+  animation: fade-in 1.25s ease-in-out forwards;
+  font-family: "Oswald", sans-serif;
+}
+@keyframes fade-in {
+  from {
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slogan span {
+  color: var(--main-color);
+  font-size: 0.42em;
+  display: block;
+  margin-bottom: -8px;
+}
+.slogan h1 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--second-color);
+}
+@media (max-width: 575px) {
+  .slogan {
+    margin-bottom: 4.5%;
+  }
+}
+
+.img-box {
+  position: relative;
+}
+.banner img:not(.hidden) {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.banner img.hidden {
+  opacity: 0 !important;
+  transform: translateX(0) !important;
+}
+.banner .comod {
+  width: 15%;
+  left: -12%;
+  animation: slide-left-comod 0.65s ease-out 0.9s forwards;
+}
+@keyframes slide-left-comod {
+  from {
+    left: -7.5%;
+    opacity: 0;
+  }
+  to {
+    left: 12%;
+    opacity: 1;
+  }
+}
+.banner .sofa {
+  width: 52%;
+  left: 50%;
+  animation: slide-up 1s ease-out 0.2s forwards;
+}
+
+@keyframes slide-up {
+  from {
+    bottom: -10%;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.banner img.chair-mat {
+  width: 44%;
+  left: -20%;
+  bottom: -8%;
+  animation: slide-left 1s ease-out 0.9s forwards;
+}
+
+@keyframes slide-left {
+  from {
+    left: -20%;
+    opacity: 0;
+  }
+  to {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+.banner .plant {
+  width: 13%;
+  right: -20%;
+  animation: slide-right 1s ease-out 0.9s forwards;
+}
+@keyframes slide-right {
+  from {
+    right: -20%;
+    opacity: 0;
+  }
+  to {
+    right: 3%;
+    opacity: 1;
   }
 }
