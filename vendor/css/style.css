@@ -277,6 +277,9 @@ header {
   opacity: 0 !important;
   transform: translateX(0) !important;
 }
+.banner img {
+  height: auto;
+}
 .banner .comod {
   width: 15%;
   left: -12%;
@@ -312,7 +315,7 @@ header {
 .banner img.chair-mat {
   width: 44%;
   left: -20%;
-  bottom: -8%;
+  bottom: -10%;
   animation: slide-left 1s ease-out 0.9s forwards;
 }
 
