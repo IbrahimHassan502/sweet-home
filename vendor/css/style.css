@@ -163,6 +163,7 @@ header {
 @media (max-width: 992px) {
   .nav-links {
     display: none;
+    opacity: 0;
     position: fixed;
     inset: 0;
     width: 100%;
@@ -171,6 +172,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 0.5s ease-in-out;
   }
 }
 .nav-links a {
