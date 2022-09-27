@@ -315,7 +315,7 @@ header {
 .banner img.chair-mat {
   width: 44%;
   left: -20%;
-  bottom: -10%;
+  bottom: -11%;
   animation: slide-left 1s ease-out 0.9s forwards;
 }
 
