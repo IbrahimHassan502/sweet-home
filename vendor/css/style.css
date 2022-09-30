@@ -232,10 +232,9 @@ header {
 
 .slogan {
   opacity: 0;
-  font-size: 7.1rem;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: -10%;
+  margin-bottom: -13%;
   animation: fade-in 1.25s ease-in-out forwards;
   font-family: "Oswald", sans-serif;
 }
@@ -248,13 +247,13 @@ header {
 }
 .slogan span {
   color: var(--main-color);
-  font-size: 0.42em;
+  font-size: 3rem;
   display: block;
   margin-bottom: -8px;
 }
 .slogan h1 {
   margin: 0;
-  font-size: 1em;
+  font-size: 7.1rem;
   font-weight: 400;
   color: var(--second-color);
 }
@@ -281,7 +280,7 @@ header {
   height: auto;
 }
 .banner .comod {
-  width: 15%;
+  width: 16%;
   left: -12%;
   animation: slide-left-comod 0.65s ease-out 0.9s forwards;
 }
@@ -291,16 +290,16 @@ header {
     opacity: 0;
   }
   to {
-    left: 12%;
+    left: 10%;
     opacity: 1;
   }
 }
+
 .banner .sofa {
-  width: 52%;
+  width: 55%;
   left: 50%;
   animation: slide-up 1s ease-out 0.2s forwards;
 }
-
 @keyframes slide-up {
   from {
     bottom: -10%;
@@ -313,12 +312,11 @@ header {
 }
 
 .banner img.chair-mat {
-  width: 44%;
+  width: 47%;
   left: -20%;
-  bottom: -11%;
+  bottom: -9%;
   animation: slide-left 1s ease-out 0.9s forwards;
 }
-
 @keyframes slide-left {
   from {
     left: -20%;
@@ -331,7 +329,7 @@ header {
 }
 
 .banner .plant {
-  width: 13%;
+  width: 15%;
   right: -20%;
   animation: slide-right 1s ease-out 0.9s forwards;
 }
@@ -341,7 +339,7 @@ header {
     opacity: 0;
   }
   to {
-    right: 3%;
+    right: 0;
     opacity: 1;
   }
 }
