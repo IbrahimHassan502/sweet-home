@@ -413,7 +413,7 @@ header {
 ====================================== */
 .banner {
   overflow: hidden;
-  height: 100vh;
+  height: 100vh !important;
   position: relative;
 }
 .banner .container {
