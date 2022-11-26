@@ -1,12 +1,11 @@
 "use strict";
 // banner height
-const banner = document.querySelector(".banner");
-const headerHeight = document
-  .querySelector("header")
-  .getBoundingClientRect()
-  .height.toFixed(1);
-console.log(window.innerHeight);
-banner.style.height = `${100 - (headerHeight / window.innerHeight) * 100}vh`;
+// const banner = document.querySelector(".banner");
+// const headerHeight = document
+//   .querySelector("header")
+//   .getBoundingClientRect()
+//   .height.toFixed(1);
+// banner.style.height = `${100 - (headerHeight / window.innerHeight) * 100}vh`;
 // menu button
 const menuButton = document.querySelector(".menu-button");
 const navLinks = document.querySelector(".nav-links");
