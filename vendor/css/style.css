@@ -163,7 +163,7 @@ template {
     General
 ====================================== */
 :root {
-  --dark-color: #69a32a;
+  --dark-color: #1d2e4c;
   --main-color: #8db959;
   --second-color: #e4b364;
   font-size: 10px;
@@ -413,7 +413,7 @@ header {
 ====================================== */
 .banner {
   overflow: hidden;
-  height: 100vh !important;
+  height: 100vh;
   position: relative;
 }
 .banner .container {
