@@ -1,0 +1,4 @@
+- you didn't change font size for the root AND for an element at the same time (that would make suoper small in the element)
+- look for negative time in animation (to use the same animation for both flipping words)
+- remove all the prefixed proberties (you will add automatically later just in case one of the prefixes from the old code is not needed anymore)
+- you can search for how proberly devide your animation

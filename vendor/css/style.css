@@ -165,10 +165,12 @@ template {
 :root {
   --dark-color: #1d2e4c;
   --main-color: #8db959;
-  --second-color: #e4b364;
+  --second-color: #d5a059;
+  /* --second-color: #e4b364; */
   font-size: 10px;
 }
-@media (max-width: 380px) {
+/* changed max-width from 380px*/
+@media (max-width: 991px) {
   :root {
     font-size: 8.5px;
   }
@@ -184,6 +186,8 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   min-height: 500vh;
+  /* background-color: #e6e8ea; */
+  background-color: #e6e8ea;
 }
 h1,
 h2,
@@ -221,11 +225,15 @@ section.blur {
   transition: all 0.35s ease-in-out;
 }
 img {
-  max-width: 100%;
+  width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 ul {
   list-style: none;
+}
+ul li {
+  cursor: pointer;
 }
 
 a {
@@ -245,7 +253,9 @@ a .link-text {
   position: absolute;
   top: -10px;
 }
-
+button {
+  all: unset;
+}
 /* container */
 .container {
   padding-left: 15px;
@@ -325,12 +335,12 @@ header {
   padding-right: 16px;
   font-size: 1.8rem;
 }
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .upper-nav {
     font-size: 1.5rem;
     gap: 35px;
   }
-}
+} */
 @media (max-width: 992px) {
   .upper-nav {
     padding-right: 0;
@@ -340,15 +350,15 @@ header {
 .upper-nav .contact-num i {
   margin-right: 18px;
 }
-.upper-nav a i {
-  margin-right: 36px;
+.upper-nav a {
+  padding-inline: 18px;
 }
 @media (max-width: 767px) {
-  .upper-nav a i {
-    margin-right: 18px;
+  .upper-nav a {
+    padding-inline: 12.5px;
   }
 }
-.upper-nav a:last-of-type i {
+.upper-nav a:last-of-type {
   margin: 0;
 }
 .upper-nav a {
@@ -575,9 +585,9 @@ header {
 .head-box p {
   font-weight: bold;
 }
-.head-box span {
+/* .head-box span {
   color: var(--main-color);
-}
+} */
 .about-container {
   gap: 15px;
 }
@@ -587,9 +597,24 @@ header {
 article.quote {
   padding: 48px 0 24px;
 }
+/* .quote .container {
+  width: 100%;
+} */
 .quote .quote-container {
-  gap: 0 30px;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  display: flex;
+  gap: 30px;
+}
+.quote .quote-container section {
+  flex: 1 0 50%;
+}
+@media (max-width: 767px) {
+  .quote .quote-container {
+    /* gap: 30px 0; */
+    flex-direction: column;
+  }
+}
+.quote .quote-container > sectino {
+  flex: 1 0 50%;
 }
 .quote h2 {
   text-transform: uppercase;
@@ -613,9 +638,7 @@ article.quote {
   width: 100%;
   height: 100%;
   letter-spacing: 2px;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-animation: flipmain 5s ease-in-out 0s infinite forwards;
   animation: flipmain 5s ease-in-out 0s infinite forwards;
 }
 
@@ -666,49 +689,40 @@ article.quote {
   right: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   letter-spacing: 2px;
-  -webkit-animation: flipalt 5s ease-in-out 0s infinite forwards;
   animation: flipalt 5s ease-in-out 0s infinite forwards;
 }
 @-webkit-keyframes flipalt {
   0%,
   30% {
-    -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
   }
 
   35%,
   85% {
-    -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   90%,
   100% {
-    -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
   }
 }
 @keyframes flipalt {
   0%,
   30% {
-    -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
   }
 
   35%,
   85% {
-    -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg);
   }
 
   90%,
   100% {
-    -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
   }
 }
@@ -723,11 +737,113 @@ article.quote {
   color: var(--dark-color);
   background-color: var(--second-color);
 }
-
 .quote .img-cont {
   position: relative;
 }
 .quote .img-cont img {
   position: absolute;
-  max-width: 106%;
+  display: block;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .quote .img-cont img {
+    position: relative;
+  }
+}
+/* ===================================
+    gallery
+====================================== */
+.gallery h2 {
+  text-align: center;
+  font-weight: 400; /* should I keep it ? */
+}
+.gallery ul {
+  display: flex;
+  justify-content: center;
+  margin: 57px auto 32px;
+  gap: 8.5%;
+}
+.gallery ul li {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  color: var(--dark-color);
+  font-weight: bold;
+  transition: 0.6s ease-in-out;
+}
+@media (max-width: 767px) {
+  .gallery ul li {
+    font-size: 1.5rem;
+  }
+}
+/* .gallery ul li.active button {
+  color: var(--main-color) !important;
+} */
+.gallery ul li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2.5px;
+  background-color: var(--dark-color);
+  transition: 0.6s ease-in-out;
+}
+.gallery ul li.active::after {
+  transform: scaleX(1);
+}
+
+.gallery-grid {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8em;
+  grid-template-areas:
+    "img-1 img-2 img-3 img-3"
+    "img-1 img-4 img-5 img-6"
+    "img-7 img-7 img-8 img-6";
+  transition: 0.5s;
+}
+.gallery-grid.alternate {
+  /* grid-template-columns: 0 1fr 1fr 1fr; */
+  grid-template-areas:
+    "img-2 img-3 img-3 img-6"
+    "img-7 img-7 img-5 img-6"
+    " . . . img-8";
+}
+.gallery .img-wrapper {
+  height: 14em;
+}
+.gallery .img-wrapper.long {
+  min-height: 28.8em;
+}
+.img-1 {
+  grid-area: img-1;
+  background: no-repeat center/cover url("../../images/gallery-1.jpg");
+}
+.img-2 {
+  grid-area: img-2;
+  background: no-repeat center/cover url("../../images/gallery-2.jpg");
+}
+.img-3 {
+  grid-area: img-3;
+  background: no-repeat center/cover url("../../images/gallery-3.jpg");
+}
+.img-4 {
+  grid-area: img-4;
+  background: no-repeat center/cover url("../../images/gallery-4.jpg");
+}
+.img-5 {
+  grid-area: img-5;
+  background: no-repeat center/cover url("../../images/gallery-5.jpg");
+}
+.img-6 {
+  grid-area: img-6;
+  background: no-repeat center/cover url("../../images/gallery-6.jpg");
+}
+.img-7 {
+  grid-area: img-7;
+  background: no-repeat center/cover url("../../images/gallery-7.jpg");
+}
+.img-8 {
+  grid-area: img-8;
+  background: no-repeat center/cover url("../../images/gallery-8.jpg");
 }

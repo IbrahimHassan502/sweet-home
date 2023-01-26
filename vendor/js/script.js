@@ -1,11 +1,4 @@
 "use strict";
-// banner height
-// const banner = document.querySelector(".banner");
-// const headerHeight = document
-//   .querySelector("header")
-//   .getBoundingClientRect()
-//   .height.toFixed(1);
-// banner.style.height = `${100 - (headerHeight / window.innerHeight) * 100}vh`;
 // menu button
 const menuButton = document.querySelector(".menu-button");
 const navLinks = document.querySelector(".nav-links");
@@ -20,4 +13,13 @@ navLinks.addEventListener("click", () => {
   setTimeout(() => {
     navLinks.style.display = "none";
   }, 500);
+});
+// gallery
+const galleryNav = document.querySelector(".gallery-nav");
+galleryNav.addEventListener("click", (e) => {
+  if (e.target.nodeName == "BUTTON") {
+    const galleryLis = document.querySelectorAll(".gallery-nav li");
+    galleryLis.forEach((li) => li.classList.remove("active"));
+    e.target.parentElement.classList.toggle("active");
+  }
 });
