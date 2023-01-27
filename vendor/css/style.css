@@ -802,22 +802,76 @@ article.quote {
     "img-7 img-7 img-8 img-6";
   transition: 0.5s;
 }
-.gallery-grid.alternate {
-  /* grid-template-columns: 0 1fr 1fr 1fr; */
-  grid-template-areas:
-    "img-2 img-3 img-3 img-6"
-    "img-7 img-7 img-5 img-6"
-    " . . . img-8";
-}
 .gallery .img-wrapper {
   height: 14em;
+  cursor: pointer;
+  position: relative;
+  transition: 0.7s;
+}
+.gallery .img-wrapper:hover {
+  background-size: 110% 110%;
+}
+.gallery .img-wrapper::after {
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  opacity: 1;
+  transition: 0.7s;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  content: "\f002";
+  font-weight: 900;
+}
+.gallery .img-wrapper:hover::after {
+  opacity: 1;
 }
 .gallery .img-wrapper.long {
   min-height: 28.8em;
 }
+.gallery .img-wrapper div {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  border-width: 3px;
+  border-style: solid;
+  z-index: 2;
+}
+.gallery .img-wrapper div.top.left {
+  border-color: snow transparent transparent snow;
+  top: 4%;
+  left: 4%;
+}
+.gallery .img-wrapper div.top.right {
+  border-color: snow snow transparent transparent;
+  top: 4%;
+  right: 4%;
+}
+.gallery .img-wrapper div.bottom.left {
+  border-color: transparent transparent snow snow;
+  bottom: 4%;
+  left: 4%;
+}
+.gallery .img-wrapper div.bottom.right {
+  border-color: transparent snow snow transparent;
+  bottom: 4%;
+  right: 4%;
+}
+.gallery .img-wrapper i {
+  color: white;
+  position: relative;
+  box-sizing: 2;
+  z-index: 2;
+  font-size: 2.5em;
+}
 .img-1 {
   grid-area: img-1;
-  background: no-repeat center/cover url("../../images/gallery-1.jpg");
+  background: no-repeat center/100% 100% url("../../images/gallery-1.jpg");
+}
+.img-1 {
 }
 .img-2 {
   grid-area: img-2;
