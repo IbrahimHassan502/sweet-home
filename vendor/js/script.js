@@ -15,11 +15,16 @@ navLinks.addEventListener("click", () => {
   }, 500);
 });
 // gallery
+const gallery = document.querySelector(".gallery");
 const galleryNav = document.querySelector(".gallery-nav");
 galleryNav.addEventListener("click", (e) => {
   if (e.target.nodeName == "BUTTON") {
-    const galleryLis = document.querySelectorAll(".gallery-nav li");
-    galleryLis.forEach((li) => li.classList.remove("active"));
-    e.target.parentElement.classList.toggle("active");
+    let button = e.target;
+    // selecting active nav button
+    const galleryList = document.querySelectorAll(".gallery-nav li");
+    galleryList.forEach((li) => li.classList.remove("active"));
+    button.parentElement.classList.toggle("active");
+    // shuffling images
+    gallery.setAttribute("data-category", button.dataset.category);
   }
 });
