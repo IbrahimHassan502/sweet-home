@@ -195,10 +195,11 @@ h4,
 h5,
 h6 {
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
 }
 h2 {
   font-size: 3.2rem;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 p {
   font-weight: 300;
@@ -595,6 +596,7 @@ header {
 ====================================== */
 article.quote {
   padding: 48px 0 24px;
+  margin-bottom: 200px;
 }
 /* .quote .container {
   width: 100%;
@@ -822,7 +824,7 @@ article.quote {
 .gallery .img-wrapper::after {
   content: "\f002";
   font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 5 Free";
   -webkit-font-smoothing: antialiased;
   font-size: 1.4em;
   color: white;
@@ -1101,4 +1103,275 @@ article.quote {
   background-color: transparent;
   border: 3px solid var(--dark-color);
   color: var(--dark-color);
+}
+/* ===================================
+    category
+====================================== */
+.categories {
+  text-align: center;
+}
+.categories .heading-text {
+  font-family: "Oswald", sans-serif;
+}
+.categories h2 {
+  font-size: 3.2em;
+  margin: 10px auto 76px;
+}
+.category-flex {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  gap: 8px;
+}
+@media (max-width: 767px) {
+  .category-flex {
+    flex-direction: column;
+  }
+}
+.category-flex .flex-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  gap: 8px;
+}
+.category-flex .flex-wrapper div {
+  flex-grow: 1;
+  flex-basis: 0;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+}
+.category-flex .flex-wrapper div:hover {
+  flex-grow: 3;
+}
+.category-flex .flex-wrapper div::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+  font-size: 2em;
+  text-transform: capitalize;
+  display: grid;
+  place-items: center;
+}
+.category-flex .flex-wrapper div:hover::after {
+  opacity: 1;
+}
+.category-flex .flex-wrapper div.office {
+  background-image: url("../../images/office.webp");
+}
+.category-flex .flex-wrapper div.office::after {
+  content: "office";
+}
+.category-flex .flex-wrapper div.bed-room {
+  background-image: url("../../images/bed-room.webp");
+}
+.category-flex .flex-wrapper div.bed-room::after {
+  content: "bed room";
+}
+.category-flex .flex-wrapper div.living-room {
+  background-image: url("../../images/living.webp");
+}
+.category-flex .flex-wrapper div.living-room::after {
+  content: "living";
+}
+.category-flex .flex-wrapper div.dinner {
+  background-image: url("../../images/dinner.webp");
+}
+.category-flex .flex-wrapper div.dinner::after {
+  content: "dinner";
+}
+.category-flex .flex-wrapper div.nursery {
+  background-image: url("../../images/nursery.webp");
+}
+.category-flex .flex-wrapper div.nursery::after {
+  content: "nursery";
+}
+.category-flex .flex-wrapper div.kitchen {
+  background-image: url("../../images/kitchen.webp");
+}
+.category-flex .flex-wrapper div.kitchen::after {
+  content: "kitchen";
+}
+/* ===================================
+    reviews
+====================================== */
+.reviews .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  align-items: center;
+  gap: 20px;
+}
+.reviews h2 {
+  font-size: 4.5em;
+  line-height: 1.2;
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .reviews h2 {
+    font-size: 3.5em;
+    text-align: center;
+  }
+}
+.reviews h2 span {
+  color: var(--second-color);
+}
+
+.carousel {
+  border-left: 1px solid var(--dark-color);
+}
+@media (max-width: 580px) {
+  .carousel {
+    border-left: 0;
+  }
+}
+.carousel .item {
+  text-align: center;
+}
+.carousel .item img {
+  width: 26%;
+  padding: 0.6%;
+  border: 2.5px solid #1d2e4c;
+  border-radius: 50%;
+  margin: 48px auto 16px;
+}
+.carousel .item .name {
+  text-transform: capitalize;
+  font-size: 1.7em;
+}
+.carousel .item p {
+  padding: 32px;
+}
+.carousel .item p::before {
+  content: "\f10d";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  text-align: left;
+}
+.carousel .item p::after {
+  content: "\f10e";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  text-align: right;
+}
+/* ===================================
+    contact
+====================================== */
+article.contact {
+  margin: 0;
+}
+.contact .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  gap: 70px;
+}
+@media (max-width: 450px) {
+  .contact .container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+@media (min-width: 992px) {
+  .contact .container {
+    width: 100%;
+  }
+}
+.contact h2 {
+  text-transform: capitalize;
+  font-size: 3em;
+  color: var(--second-color);
+  margin-bottom: 32px;
+}
+.contact .form-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 450px) {
+  .contact .form-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+.contact form input:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+.contact form input,
+.contact form textarea {
+  background: transparent;
+  border: 1px solid var(--second-color);
+  padding: 10px;
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: white;
+}
+.contact form textarea {
+  height: 100%;
+}
+@media (max-width: 450px) {
+  .contact form textarea {
+    height: 200px;
+  }
+}
+.contact input[type="submit"] {
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  margin: 24px auto;
+  padding: 10px;
+  border: 1px solid #e4b364;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 300;
+  transition: 0.7s;
+}
+.contact form ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: var(--second-color);
+  transition: 0.7s ease-in-out;
+}
+
+.contact .contact-info p {
+  margin-bottom: 30px;
+}
+
+.contact .contact-info li {
+  display: flex;
+  gap: 17px;
+  margin-bottom: 30px;
+}
+.contact .contact-info li i {
+  font-size: 1.5em;
+  color: var(--second-color);
+}
+/* ===================================
+    contact
+====================================== */
+footer {
+  background: var(--dark-color);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 0.7em;
+}
+footer span.main-color {
+  color: var(--main-color);
+}
+footer span.second-color {
+  color: var(--second-color);
 }

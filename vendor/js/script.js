@@ -1,5 +1,5 @@
 "use strict";
-// menu button
+// ======================= menu button =======================
 const menuButton = document.querySelector(".menu-button");
 const navLinks = document.querySelector(".nav-links");
 menuButton.addEventListener("click", () => {
@@ -14,7 +14,7 @@ navLinks.addEventListener("click", () => {
     navLinks.style.display = "none";
   }, 500);
 });
-// gallery
+// ======================= gallery =======================
 const gallery = document.querySelector(".gallery");
 const galleryNav = document.querySelector(".gallery-nav");
 galleryNav.addEventListener("click", (e) => {
@@ -27,4 +27,15 @@ galleryNav.addEventListener("click", (e) => {
     // shuffling images
     gallery.setAttribute("data-category", button.dataset.category);
   }
+});
+// ======================= carousel =======================
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  items: 1,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  center: true,
+  dots: false,
 });
