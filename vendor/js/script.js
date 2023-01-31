@@ -34,7 +34,7 @@ $(".owl-carousel").owlCarousel({
   margin: 10,
   items: 1,
   autoplay: true,
-  autoplayTimeout: 5000,
+  autoplayTimeout: 10000,
   autoplayHoverPause: true,
   center: true,
   dots: false,
