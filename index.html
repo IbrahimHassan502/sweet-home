@@ -80,11 +80,11 @@
             <li><a href="#about">about</a></li>
             <li><a href="#gallery">gallery</a></li>
             <li><a href="#categories">categories</a></li>
-            <li><a href="#testimonials">testimonials</a></li>
+            <li><a href="#reviews">reviews</a></li>
             <li><a href="#contact">contact us</a></li>
           </ul>
           <div class="menu-button">
-            <i class="fa-solid fa-bars"></i>
+            <i class="icon-menu"></i>
           </div>
         </nav>
       </div>
@@ -161,7 +161,7 @@
       </div>
     </article>
     <!-- about us -->
-    <article class="about">
+    <article class="about" id="about">
       <div class="container">
         <div class="d-grid-2fr about-container">
           <section>
@@ -224,7 +224,13 @@
       </div>
     </article>
     <!-- gallery -->
-    <article class="gallery" data-category="all">
+    <article class="gallery" id="gallery" data-category="all">
+      <div class="gallery-view-box">
+        <i class="icon-left-open left"></i>
+        <img src="" alt="" />
+        <i class="icon-cancel-circled2 close"></i>
+        <i class="icon-right-open right"></i>
+      </div>
       <div class="container">
         <h2>New Pieces For The Week</h2>
         <ul class="gallery-nav">
@@ -253,6 +259,7 @@
           <div class="corner bottom left"></div>
           <div class="corner bottom right"></div>
         </div>
+
         <div class="img-wrapper img-wrapper-2 img-2">
           <div class="img"></div>
           <div class="corner top left"></div>
@@ -260,6 +267,7 @@
           <div class="corner bottom left"></div>
           <div class="corner bottom right"></div>
         </div>
+
         <div class="img-wrapper img-wrapper-3 wide img-3">
           <div class="img"></div>
           <div class="corner top left"></div>
@@ -267,6 +275,7 @@
           <div class="corner bottom left"></div>
           <div class="corner bottom right"></div>
         </div>
+
         <div class="img-wrapper img-wrapper-4 img-4">
           <div class="img"></div>
           <div class="corner top left"></div>
@@ -274,6 +283,7 @@
           <div class="corner bottom left"></div>
           <div class="corner bottom right"></div>
         </div>
+
         <div class="img-wrapper img-wrapper-5 img-5">
           <div class="img"></div>
           <div class="corner top left"></div>
@@ -281,6 +291,7 @@
           <div class="corner bottom left"></div>
           <div class="corner bottom right"></div>
         </div>
+
         <div class="img-wrapper img-wrapper-6 img-6 long">
           <div class="img"></div>
           <div class="corner top left"></div>
@@ -288,6 +299,7 @@
           <div class="corner bottom left"></div>
           <div class="corner bottom right"></div>
         </div>
+
         <div class="img-wrapper img-wrapper-7 wide img-7">
           <div class="img"></div>
           <div class="corner top left"></div>
@@ -295,6 +307,7 @@
           <div class="corner bottom left"></div>
           <div class="corner bottom right"></div>
         </div>
+        
         <div class="img-wrapper img-wrapper-8 img-8">
           <div class="img"></div>
           <div class="corner top left"></div>
@@ -306,7 +319,7 @@
       <a href="#">see our gallery</a>
     </article>
     <!-- categories -->
-    <article class="categories">
+    <article class="categories" id="categories">
       <div class="container">
         <div class="heading-text">alot of pieces to match ?</div>
         <h2>we did it for you</h2>
@@ -325,7 +338,7 @@
       </div>
     </article>
     <!-- reviews -->
-    <article class="reviews">
+    <article class="reviews" id="reviews">
       <div class="container">
         <h2>see what our <span>satisfied</span> clients say about us</h2>
         <div class="owl-carousel carousel">
@@ -363,7 +376,7 @@
       </div>
     </article>
     <!-- contact -->
-    <article class="contact">
+    <article class="contact" id="contact">
       <div class="container">
         <form action="POST">
           <h2>get in touch</h2>
