@@ -335,12 +335,7 @@ header {
   padding-right: 16px;
   font-size: 1.8rem;
 }
-/* @media (max-width: 767px) {
-  .upper-nav {
-    font-size: 1.5rem;
-    gap: 35px;
-  }
-} */
+
 @media (max-width: 992px) {
   .upper-nav {
     padding-right: 0;
@@ -405,7 +400,6 @@ header {
 }
 .nav-links a.active {
   margin: 0px;
-  padding: 8px 16px;
   background-color: var(--second-color);
   color: var(--dark-color);
 }
