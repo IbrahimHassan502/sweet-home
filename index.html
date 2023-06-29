@@ -91,7 +91,7 @@
       </div>
     </header>
     <!-- banner -->
-    <article class="banner hide">
+    <article class="banner">
       <div class="container">
         <div class="slogan">
           <span>home</span>
@@ -167,7 +167,7 @@
       </div>
     </article>
     <!-- about us -->
-    <article class="about hide" id="about">
+    <article class="about" id="about">
       <div class="container">
         <div class="d-grid-2fr about-container">
           <section>
@@ -203,7 +203,7 @@
       </div>
     </article>
     <!-- quote -->
-    <article class="quote hide">
+    <article class="quote">
       <div class="container">
         <h2>
           most
@@ -237,7 +237,7 @@
       </div>
     </article>
     <!-- gallery -->
-    <article class="gallery hide" id="gallery" data-category="all">
+    <article class="gallery" id="gallery" data-category="all">
       <div class="gallery-view-box">
         <i class="icon-left-open left"></i>
         <img src="" alt="placeholder for the zoomed gallery image" />
@@ -332,7 +332,7 @@
       <a href="#">see our gallery</a>
     </article>
     <!-- categories -->
-    <article class="categories hide" id="categories">
+    <article class="categories" id="categories">
       <div class="container">
         <div class="heading-text">alot of pieces to match ?</div>
         <h2>we did it for you</h2>
@@ -351,7 +351,7 @@
       </div>
     </article>
     <!-- reviews -->
-    <article class="reviews hide" id="reviews">
+    <article class="reviews" id="reviews">
       <div class="container">
         <h2>see what our <span>satisfied</span> clients say about us</h2>
         <div class="owl-carousel carousel">
@@ -405,20 +405,22 @@
       </div>
     </article>
     <!-- contact -->
-    <article class="contact hide" id="contact">
+    <article class="contact" id="contact">
       <div class="container">
-        <form action="POST">
-          <h2>get in touch</h2>
-          <div class="form-container">
-            <div>
-              <input type="name" placeholder="your name" />
-              <input type="text" placeholder="email address" />
-              <input type="subject" placeholder="subject" />
+        <section>
+          <form action="POST">
+            <h2>get in touch</h2>
+            <div class="form-container">
+              <div>
+                <input type="name" placeholder="your name" />
+                <input type="text" placeholder="email address" />
+                <input type="subject" placeholder="subject" />
+              </div>
+              <textarea placeholder="your message"></textarea>
             </div>
-            <textarea placeholder="your message"></textarea>
-          </div>
-          <input type="submit" value="send message" />
-          <ul>
+            <input type="submit" value="send message" />
+          </form>
+          <ul class="link-list">
             <li><i class="icon-facebook"></i></li>
             <li><i class="icon-twitter"></i></li>
             <li><i class="icon-gplus"></i></li>
@@ -426,7 +428,7 @@
             <li><i class="icon-instagram"></i></li>
             <li><i class="icon-pinterest"></i></li>
           </ul>
-        </form>
+        </section>
 
         <section class="contact-info">
           <h2>our location</h2>
@@ -452,7 +454,7 @@
         </section>
       </div>
     </article>
-    
+
     <footer>
       &copy; <span class="footer-date">2021</span>
       <span class="main-color">Sweet</span

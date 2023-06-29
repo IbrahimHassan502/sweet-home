@@ -234,8 +234,15 @@ p {
   line-height: 25px;
   letter-spacing: 0.5px;
 }
-article {
-  transition: 0.35s ease-in-out;
+article:not(:first-of-type) {
+  transition: top 1s ease-in-out, opacity 1.2s ease-in-out;
+  opacity: 0;
+  position: relative;
+  top: 50vh;
+}
+article.show {
+  opacity: 1;
+  top: 0;
 }
 article:nth-of-type(odd) {
   background-color: var(--dark-color, #00008b);
@@ -1203,12 +1210,15 @@ article.contact {
   background: 0 0;
   color: var(--second-color);
 }
-.contact form ul {
+.contact ul.link-list {
   display: flex;
-  width: 100%;
+  width: 0%;
   justify-content: space-between;
   color: var(--second-color);
-  transition: 0.7s ease-in-out;
+  transition: 0.7s 0.2s;
+}
+.contact ul.link-list.animate {
+  width: 100%;
 }
 .contact .contact-info p {
   margin-bottom: 30px;
